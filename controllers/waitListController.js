@@ -43,7 +43,7 @@ const createWaitLister = async (req, res) => {
 			message: `${newWaitLister.rows[0].name} added to the waitlist`,
 		});
 	} catch (err) {
-		res.status(404).json({
+		res.status(400).json({
 			status: "fail",
 			message: err.message,
 		});
